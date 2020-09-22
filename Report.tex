@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[titletoc]{appendix}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}         
+\DeclarePairedDelimiter\Floor\lfloor\rfloor
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{remark}{Remark}
+
+\begin{document}
+
+\title{Properties of the Temperature Distribution Curves of a Metal Bar}
+\author{Anand Balivada \\ Aryan Mishra}
+\maketitle
+
+\begin{abstract}
+ We investigate the temperature distribution curves of a metal bar, heated at the centre for a specified time interval, and experimentally establish the conservation of the area under the graphs of these curves. We proceed to compare these to numerical simulations for a one dimensional bar under similar conditions, but with an imposed Neumann Boundary condition to represent insulation (ensuring conservation of area under the graphs). 
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+
+
+\section{Theory and Problem Statement}
+In a metal bar of length $l$ treated as a one dimensional, closed subset $[0,l]$ of $\mathbb{R}$, the distribution of temperature $T(x, t), x \in [0,l], t > 0$, obeys the equation: $$\frac{\partial T}{\partial t} = \alpha\frac{\partial^{2}T}{\partial x^{2}} \dots (1)$$
+where $\alpha$ is the thermal diffusivity of the material of the bar given by $\frac{k}{c\rho}$, where $k,c,\rho$ are the thermal conductivity, specific heat capacity and mass density of the metal bar respectively (Chapter 1.6 of [1]). \\ 
+We enforce the Neumann Boundary Condition $\frac{\partial T}{\partial x}(0,t) = \frac{\partial T}{\partial x}(l,t)  = 0$, whose physical significance is the insulation of the sides of the bar. 
+\begin{remark}
+The heat equation neglects the loss of heat through convection or radiation, and thus the heat equation where the sides of the bar are insulated guarantees no loss of heat.
+\end{remark}
+\begin{theorem}
+$\int_{0}^{l} T(x,t) dx$ is constant for all times $t > 0$. 
+\end{theorem}
+
+$\textbf{Problem Statement}$: To experimentally verify $Theorem \text{ }2.1$ by measuring the measuring the temperature distribution of a metal bar. 
+
+\section{Design of the Experiment}
+
+
+
+\section{Results}
+
+
+\section{Conclusions}
+
+\section{References}
+[1] Churchill, Ruel.V., Ward, James B., Fourier Series and Boundary Value Problems.
+
+
+%\begin{appendices}
+% \section{Simulation Code in GNU Octave}
+% \section{Code for Arduino Genuino with Thermocouple}
+%\end{appendices}
+
+\end{document}
